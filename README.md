@@ -1,6 +1,3 @@
-# gitdemo
-
-
 create folder ---> mkr foldername
 
 to go location ---> cd foldername
@@ -145,3 +142,136 @@ then ---> git add index.html
 
 
 then delete ----->  git branch -d hello-world-images
+
+----------------------------------------------------------------------
+--------------------------------------------------------------------
+
+
+------------------------------------------------------------------
+-----------------------------------------------------------------
+
+github connect ------->
+
+
+1.  add remoto localtion to ur local repo   ------->  git remote add origin https://github.com/Harishkp77/gitdemo.git
+
+2. push the local repo to remoto repo  ---- >  git push --set-upstream origin master
+
+
+then ->
+
+i added readme file in github
+
+so whenever we start we should update our local repo from remote
+
+
+
+for that 
+
+
+
+1.   Git Fetch   
+
+---------------->    git fetch origin 
+
+then to check --------->git status
+
+it shows Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+
+to cross check  ---->    git log origin/master
+
+commit 3f8892881df4234214f49fefc39ea315a9d002ca (origin/master)
+Author: Harishkp77 <137972179+Harishkp77@users.noreply.github.com>
+Date:   Sat Jul 29 20:22:41 2023 +0530
+
+    Create README.md
+
+commit 6f4e1be260c99cc80313097f815da64358212a32 (HEAD -> master)
+Merge: e652570 f951fd2
+Author: Harishkp77 <shaarini_harish@outlook.com>
+Date:   Sat Jul 29 14:15:40 2023 +0530
+
+    merged with hello-world-images after fixing conflicts
+
+commit f951fd2ee76aa209c07fd3aa43ae644ad7d424f9
+Author: Harishkp77 <shaarini_harish@outlook.com>
+Date:   Sat Jul 29 14:09:07 2023 +0530
+
+    added new image
+
+commit e652570c51bb4fb0e1ffd95d0dcbee6bc54e1757
+Author: Harishkp77 <shaarini_harish@outlook.com>
+Date:   Sat Jul 29 14:02:09 2023 +0530
+
+
+
+
+fetch will show the updates changed ...
+
+
+
+now after fetch we should merge --------------->  git merge origin/master
+Updating 6f4e1be..3f88928
+Fast-forward
+ README.md | 147 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 147 insertions(+)
+ create mode 100644 README.md
+
+-----merge combines the current branch, with a specified branch.-------
+
+then check status----->  git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
+
+
+for the above  2 condition of fetch and merge --> we can use pull command----
+
+
+
+let see
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
