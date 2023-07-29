@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="bluestyle.css">
+    <title>Git Commands</title>
 </head>
 <body>
-<<<<<<< HEAD
-    <h2>hi welcome </h2>
+    <h1>Git Commands</h1>
+    <h2>Creating and Configuring Git</h2>
+    <pre>
+        <code>
+            create folder --&gt; mkr foldername
+            to go location --&gt; cd foldername
+            git config --global user.name "Harishkp77"
+            git config --global user.email "shaarini_harish@outlook.com"
+            to create git --&gt; git init
+            to check the files in folder --&gt; dir
+            we can add files in the folder, but they are untracked.
+            to check --&gt; git status
+            staging the file --&gt; git add index.html
+        </code>
+    </pre>
 
-<p>
-    so ---->  git checkout -b emergency-fix <br>
-    it will show Switched to a new branch 'emergency-fix'</p>
+    <h3>Before Staging:</h3>
+    <pre>
+        <code>
+            D:\MyProjectLibrary\NewFolderTestGit&gt;git status
+            On branch master
 
+            No commits yet
 
-=======
-    <h1>Hello world!</h1>
-    <div><img src="img_hello_world.jpg" alt="Hello World from Space"
-    style="width:100%;max-width:960px"></div>
-    <p>This is the first file in my new Git Repo.</p>
-    <p>A new line in our file!</p>
-    <div><img src="img_hello_git.jpg" alt="Hello Git" style="width:100%;max-width:640px"></div>
->>>>>>> hello-world-images
-    <p id="id"></p>
+            Untracked files:
+            (use "git add &lt;file&gt;..." to include in what will be committed)
+                index.html
+
+            nothing added to commit but untracked files present (use "git add" to track)
+        </code>
+    </pre>
+
+    <h3>After Staging:</h3>
+    <pre>
+        <code>
+            D:\MyProjectLibrary\NewFolderTestGit&gt;git add index.html
+            D:\MyProjectLibrary\NewFolderTestGit&gt;git status
+            On branch master
+
+            No commits yet
+
+            Changes to be committed:
+            (use "git rm --cached &lt;file&gt;..." to unstage)
+                new file: index.html
+        </code>
+    </pre>
+
+    <h2>Branching</h2>
+    <pre>
+        <code>
+            to add a branch --&gt; git branch 'branchname' (e.g., git branch hello-world-images)
+            to create a branch from master --&gt; git branch hello-world-images * master
+            after creating a branch, move the current workspace to the branch --&gt; git checkout hello-world-images
+            to check the branch status --&gt; git status
+            make changes, stage and commit for the branch
+            to merge the branch into master, switch back to master --&gt; git checkout master
+            to merge the branch --&gt; git merge hello-world-images
+            delete the merged branch --&gt; git branch -d hello-world-images
+        </code>
+    </pre>
+
+    <h2>Merging Conflicts</h2>
+    <pre>
+        <code>
+            to fix errors in master without disturbing the branch --&gt; git checkout -b emergency-fix
+            (make changes, stage, and commit in emergency-fix branch)
+            to merge emergency-fix into master, switch back to master --&gt; git checkout master
+            to merge the branch --&gt; git merge emergency-fix
+            delete the merged branch --&gt; git branch -d emergency-fix
+            (similarly, merge changes from another branch with conflicts)
+            go to the editor and resolve conflicts, then stage the resolved file --&gt; git add index.html
+            check status and commit the merged changes --&gt; git commit -m "merged with branch after fixing conflicts"
+        </code>
+    </pre>
+
+    <h2>Github Integration</h2>
+    <pre>
+        <code>
+            add remote location to your local repo --&gt; git remote add origin https://github.com/Harishkp77/gitdemo.git
+            push the local repo to the remote repo --&gt; git push --set-upstream origin master
+            (when there are updates on the remote repo)
+            update your local repo from remote --&gt; git fetch origin
+            check status and merge with remote/master --&gt; git merge origin/master
+            or simply use pull command --&gt; git pull origin
+        </code>
+    </pre>
 </body>
 </html>
